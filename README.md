@@ -30,10 +30,14 @@ The sum of squared absolute values is defined as
 
 <!-- <equation class="equation" label="eq:sum_squared_absolute_values" align="center" raw="s = \sum_{i=0}^{n-1} x_i^2" alt="Equation for the sum of squared absolute values."> -->
 
-<div class="equation" align="center" data-raw-text="s = \sum_{i=0}^{n-1} x_i^2" data-equation="eq:sum_squared_absolute_values">
+```math
+s = \sum_{i=0}^{n-1} x_i^2
+```
+
+<!-- <div class="equation" align="center" data-raw-text="s = \sum_{i=0}^{n-1} x_i^2" data-equation="eq:sum_squared_absolute_values">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@5278c8e8327430b39dd12985f7dac6d5f8033d34/lib/node_modules/@stdlib/stats/incr/sumabs2/docs/img/equation_sum_squared_absolute_values.svg" alt="Equation for the sum of squared absolute values.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -41,14 +45,30 @@ The sum of squared absolute values is defined as
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-incr-sumabs2
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import incrsumabs2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-sumabs2@deno/mod.js';
+var incrsumabs2 = require( '@stdlib/stats-incr-sumabs2' );
 ```
 
 #### incrsumabs2()
@@ -101,8 +121,8 @@ sum = accumulator();
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import incrsumabs2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-sumabs2@deno/mod.js';
+var randu = require( '@stdlib/random-base-randu' );
+var incrsumabs2 = require( '@stdlib/stats-incr-sumabs2' );
 
 var accumulator;
 var v;
@@ -148,7 +168,7 @@ console.log( accumulator() );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -192,7 +212,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -210,11 +230,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/incr/meanabs2]: https://github.com/stdlib-js/stats-incr-meanabs2/tree/deno
+[@stdlib/stats/incr/meanabs2]: https://github.com/stdlib-js/stats-incr-meanabs2
 
-[@stdlib/stats/incr/msumabs2]: https://github.com/stdlib-js/stats-incr-msumabs2/tree/deno
+[@stdlib/stats/incr/msumabs2]: https://github.com/stdlib-js/stats-incr-msumabs2
 
-[@stdlib/stats/incr/sumabs]: https://github.com/stdlib-js/stats-incr-sumabs/tree/deno
+[@stdlib/stats/incr/sumabs]: https://github.com/stdlib-js/stats-incr-sumabs
 
 <!-- </related-links> -->
 
