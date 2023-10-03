@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-incr-sumabs2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Compute a sum of squared absolute values incrementally.",
   "license": "Apache-2.0",
   "author": {
