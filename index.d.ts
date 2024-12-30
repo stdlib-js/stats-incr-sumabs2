@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,53 +16,48 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MAIN //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+/**
+* If provided a value, returns an updated sum of squared absolute values; otherwise, returns the current sum of squared absolute values.
+*
+* ## Notes
+*
+* -   If provided `NaN` or a value which, when used in computations, results in `NaN`, the accumulated value is `NaN` for all future invocations.
+*
+* @param x - value
+* @returns sum of squared absolute values
+*/
+type accumulator = ( x?: number ) => number | null;
 
 /**
 * Returns an accumulator function which incrementally computes a sum of squared absolute values.
 *
-* @returns {Function} accumulator function
+* @returns accumulator function
 *
 * @example
 * var accumulator = incrsumabs2();
 *
-* var sum = accumulator();
+* var v = accumulator();
 * // returns null
 *
-* sum = accumulator( 2.0 );
+* v = accumulator( 2.0 );
 * // returns 4.0
 *
-* sum = accumulator( -5.0 );
+* v = accumulator( -3.0 );
+* // returns 13.0
+*
+* v = accumulator( -4.0 );
 * // returns 29.0
 *
-* sum = accumulator();
+* v = accumulator();
 * // returns 29.0
 */
-function incrsumabs2() {
-	var sum = 0.0;
-	var FLG;
-	return accumulator;
-
-	/**
-	* If provided a value, the accumulator function returns an updated sum. If not provided a value, the accumulator function returns the current sum.
-	*
-	* @private
-	* @param {number} [x] - new value
-	* @returns {(number|null)} sum or null
-	*/
-	function accumulator( x ) {
-		if ( arguments.length === 0 ) {
-			return ( FLG ) ? sum : null;
-		}
-		FLG = true;
-		sum += x * x;
-		return sum;
-	}
-}
+declare function incrsumabs2(): accumulator;
 
 
 // EXPORTS //
 
-module.exports = incrsumabs2;
+export = incrsumabs2;
